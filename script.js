@@ -206,22 +206,26 @@ function initFormValidation() {
             return;
         }
         
-        // Simular envio
-        showFormAlert('Validando formulário...', 'info');
-        
-        // Aqui você enviaria os dados para um backend
-        // Exemplo: 
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ name, email, subject, message })
-        // })
-        
-        // Simulação de sucesso
+        showFormAlert('Abrindo seu aplicativo de e-mail para envio...', 'info');
+
+        // Envia para o e-mail institucional via cliente padrão do usuário (mailto)
+        const recipient = 'julio.casini@ifsp.edu.br';
+        const emailSubject = `[Site VISAO] ${subject}`;
+        const emailBody = [
+            `Nome: ${name}`,
+            `Email: ${email}`,
+            '',
+            'Mensagem:',
+            message
+        ].join('\n');
+
+        const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = mailtoUrl;
+
         setTimeout(() => {
-            showFormAlert('✓ Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+            showFormAlert('✓ Mensagem preparada no seu e-mail. Revise e clique em enviar.', 'success');
             contactForm.reset();
-        }, 1000);
+        }, 600);
     });
 }
 
