@@ -1,5 +1,5 @@
 /* ============================================
-   VISÃO - Veículos Inteligentes e Sistemas Autônomos Otimizados
+    VISAO - Veículos Inteligentes e Sistemas Autônomos Otimizados
    JavaScript Puro - Funcionalidades Interativas
    ============================================ */
 
@@ -547,7 +547,7 @@ window.addEventListener('error', function(event) {
 });
 
 // ===== CONSOLE MENSAGEM =====
-console.log('%cVISÃO - Veículos Inteligentes e Sistemas Autônomos Otimizados', 'color: #003d7a; font-size: 20px; font-weight: bold;');
+console.log('%cVISAO - Veículos Inteligentes e Sistemas Autônomos Otimizados', 'color: #003d7a; font-size: 20px; font-weight: bold;');
 console.log('%cSite moderno e responsivo carregado com sucesso!', 'color: #0066cc; font-size: 14px;');
 
 // ===== PRONTO PARA BACKEND INTEGRATION =====
