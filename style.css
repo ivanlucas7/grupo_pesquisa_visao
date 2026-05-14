@@ -599,6 +599,10 @@ body {
     display: block;
 }
 
+.team-image--aguinaldo img {
+    object-position: 62% center;
+}
+
 .team-card:hover .team-image {
     transform: scale(1.1);
 }
